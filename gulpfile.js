@@ -10,18 +10,6 @@ const concat = require('gulp-concat');
 const copy = require('gulp-copy');
 // const imagemin = require('gulp-imagemin');
 
-
-// gulp.task('sass', function() {
-//   return gulp.src('./src/assets/sass/**/*.scss')
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(cleanCSS())
-//     // .pipe(minifycss())
-//     // .pipe(jshint())
-//     // .pipe(uglify())
-//     .pipe(concat('styles.css'))
-//     .pipe(gulp.dest('./dist/css'));
-// });
-
 // Compile and minify Sass files
 gulp.task('sass', function () {
   return gulp.src('./src/assets/sass/**/*.scss')
