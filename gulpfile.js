@@ -11,34 +11,50 @@ const copy = require('gulp-copy');
 // const imagemin = require('gulp-imagemin');
 
 
-gulp.task('sass', function() {
+// gulp.task('sass', function() {
+//   return gulp.src('./src/assets/sass/**/*.scss')
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(cleanCSS())
+//     // .pipe(minifycss())
+//     // .pipe(jshint())
+//     // .pipe(uglify())
+//     .pipe(concat('styles.css'))
+//     .pipe(gulp.dest('./dist/css'));
+// });
+
+// Compile and minify Sass files
+gulp.task('sass', function () {
   return gulp.src('./src/assets/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(cleanCSS())
-    // .pipe(minifycss())
-    // .pipe(jshint())
-    // .pipe(uglify())
     .pipe(concat('styles.css'))
     .pipe(gulp.dest('./dist/css'));
 });
-gulp.task('images', function() {
-    return gulp.src('./src/assets/images/**/*')
-      .pipe(gulp.dest('./dist/images'));
-  });
+
+// Optimize images and copy to dist folder
+gulp.task('images', function () {
+  return gulp.src('./src/assets/images/**/*')
+    // .pipe(imagemin())
+    .pipe(gulp.dest('./dist/images'));
+});
 
   gulp.task('fonts', function() {
     return gulp.src('./src/assets/fonts/**/*')
       .pipe(gulp.dest('./dist/fonts'));
   });
 
-  gulp.task('js', function() {
-    return gulp.src('./src/assets/js/**/*.js')
-    //   .pipe(minify())
-      .pipe(gulp.dest('./dist/js'));
-  });
+// Concatenate and minify JavaScript files
+gulp.task('js', function () {
+  return gulp.src('./src/assets/js/**/*.js')
+    // .pipe(jshint())
+    // .pipe(jshint.reporter('default'))
+    // .pipe(concat('scripts.js'))
+    // .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'));
+});
 
   gulp.task('html', function() {
-    return gulp.src('./**/*.html')
+    return gulp.src('*.html')
     .pipe(gulp.dest('./dist/'));
       // .pipe(copy('./dist/'));
   });
