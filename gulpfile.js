@@ -12,9 +12,9 @@ const copy = require('gulp-copy');
 
 // Compile and minify Sass files
 gulp.task('sass', function () {
-  return gulp.src('./src/assets/sass/**/*.scss')
+  return gulp.src('./src/assets/sass/**/*.scss','./src/assets/sass/**/*')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(cleanCSS())
+    // .pipe(cleanCSS())
     .pipe(concat('styles.css'))
     .pipe(gulp.dest('./dist/css'));
 });
