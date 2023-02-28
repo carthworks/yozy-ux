@@ -18735,7 +18735,7 @@ body.authentication-bg .account-pages {
     width: 140px
 }
 
-.auth-fluid {
+.auth-fluid, .auth-fluid-right {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -18751,7 +18751,7 @@ body.authentication-bg .account-pages {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    background: url(../images/bg-auth.jpg) center;
+    background: url(./images/bg-auth.png) center !important;
     background-size: cover
 }
 
@@ -18772,7 +18772,7 @@ body.authentication-bg .account-pages {
     flex: 1;
     position: relative;
     color: #fff;
-    background-color: rgba(0,0,0,.3)
+    background-color:rgb(90 137 242);
 }
 
 .auth-user-testimonial {
@@ -21539,9 +21539,19 @@ span.main-title.text-uppercase {
 }
 
 .logo-lg img {
-			height: 50px;
-			margin-right: 10px;
-		}
+    height: 50px;
+    margin-right: 10px;
+}
+
 .logo-lg span {
-			color: #333;
-		}
+    color: #333;
+}
+
+
+.auth-brand img {
+    height: 3rem ;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: center;
+}
