@@ -3585,8 +3585,8 @@ textarea.form-control-lg {
 
 .btn-primary {
     --ct-btn-color: #fff;
-    --ct-btn-bg: #727cf5;
-    --ct-btn-border-color: #727cf5;
+    --ct-btn-bg: #5a89f2;
+    --ct-btn-border-color: #5a89f2;
     --ct-btn-hover-color: #fff;
     --ct-btn-hover-bg: #6169d0;
     --ct-btn-hover-border-color: #5b63c4;
@@ -3596,8 +3596,8 @@ textarea.form-control-lg {
     --ct-btn-active-border-color: #565db8;
     --ct-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --ct-btn-disabled-color: #fff;
-    --ct-btn-disabled-bg: #727cf5;
-    --ct-btn-disabled-border-color: #727cf5
+    --ct-btn-disabled-bg: #5a89f2;
+    --ct-btn-disabled-border-color: #5a89f2
 }
 
 .btn-secondary {
@@ -9222,6 +9222,17 @@ textarea.form-control-lg {
 .my-auto {
     margin-top: auto!important;
     margin-bottom: auto!important
+}
+
+
+.my-auto.continer {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0rem;
+    /* border: 1px solid #dfdfdf; */
+    /* border-radius: 6px; */
+    /* background: #f5f4f4; */
 }
 
 .mt-0 {
@@ -18692,7 +18703,7 @@ html[data-theme=dark] .text-secondary {
 }
 
 .auth-brand {
-    margin-bottom: 2rem
+    margin-bottom: 0
 }
 
 .auth-brand .logo-dark {
@@ -18751,10 +18762,42 @@ body.authentication-bg .account-pages {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    background: url(../images/bg-midJourney.webp) center !important;
+    background: url(../images/bg-login.jpeg) center !important;
     background-size: cover !important;
     
 }
+
+
+.auth-fluid, .auth-fluid-right-reg {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 100vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    // background: url(../images/bg-reg.jpeg) center !important;
+//     background: rgb(0,36,0);
+// background: linear-gradient(115deg, rgba(0,36,0,1) 0%, rgba(90,137,242,1) 0%, rgba(69,222,129,1) 100%);
+
+background: linear-gradient(115deg, rgb(0, 36, 0) 0%, rgb(173 194 241) 0%, rgb(2 223 90) 100%);
+    background-size: cover !important;
+    
+}
+
+p.text-muted.mt-3.text {
+    color: #343a40 !important;
+}
+
+
 
 .auth-user-testimonial {
     position: absolute;
@@ -18785,8 +18828,20 @@ body.authentication-bg .account-pages {
     width: 100%
 }
 
-.auth-fluid .auth-fluid-left,.auth-fluid .auth-fluid-right {
-    padding: 6rem 3rem;
+.auth-fluid-form-box-reg{
+    max-width: 50%;
+    height: 100vh;
+    border-radius: 0;
+    z-index: 2;
+    padding: 2rem;
+    background-color: var(--ct-card-bg-custom);
+    position: relative;
+    width: 100%
+
+}
+
+.auth-fluid .auth-fluid-left,.auth-fluid .auth-fluid-right,  .auth-fluid-right-reg {
+    padding: 3rem 3rem;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -18892,6 +18947,7 @@ html[data-theme=dark] .auth-brand .logo-dark {
     width: 30px;
     color: var(--ct-primary);
     background-color: rgba(var(--ct-primary-rgb),.25);
+    // background-color: #000;
     -webkit-box-shadow: 0 0 45px 0 rgba(0,0,0,.12);
     box-shadow: 0 0 45px 0 rgba(0,0,0,.12);
     text-align: center;
@@ -18910,7 +18966,8 @@ html[data-theme=dark] .auth-brand .logo-dark {
 }
 
 .faq-answer {
-    margin-left: 50px
+    color: #000 !important;
+    font-size: 1rem;
 }
 
 .maintenance-icon {
@@ -21574,4 +21631,27 @@ span.main-title.text-uppercase {
     margin: 0;
     border: 0;
     text-align: center;
+}
+
+h4.book-for-demo {
+    font-size: 3rem;
+}
+.faq-tagline{
+    color:#4c4c4c !important;
+    font-size:1rem;
+    
+}
+
+.content {
+    position: relative;
+    // margin-left: var(--ct-leftbar-width);
+    // min-height: calc(100vh - var(--ct-topbar-height) - 2px);
+    // padding: 0 0.75rem var(--ct-footer-height);
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+h3.tagline-faq {
+    color: #000!important;
+    font-size: 2rem;
 }
