@@ -18751,8 +18751,28 @@ body.authentication-bg .account-pages {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    background: url(../images/bg-auth.png) center !important;
-    background-size: cover
+    background: url(../images/bg-midJourney.webp) center !important;
+    background-size: cover !important;
+    
+}
+
+.auth-user-testimonial {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    color: #fff !important;
+    background: #00000085;
+    border-radius: 0;
+    padding: 0 0.7rem;
+}
+
+.auth-user-testimonial h2 {
+    color: #fff !important;
+    padding: 0 0.3rem;
+    padding: 0;
 }
 
 .auth-fluid .auth-fluid-form-box {
