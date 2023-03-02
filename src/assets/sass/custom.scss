@@ -9220,8 +9220,8 @@ textarea.form-control-lg {
 }
 
 .my-auto {
-    margin-top: auto!important;
-    margin-bottom: auto!important
+    // margin-top: auto!important;
+    // margin-bottom: auto!important
 }
 
 
@@ -18762,36 +18762,36 @@ body.authentication-bg .account-pages {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    background: url(../images/bg-login.jpeg) center !important;
+    // background: url(../images/bg-login.jpeg) center !important;
     background-size: cover !important;
     
 }
 
 
-.auth-fluid, .auth-fluid-right-reg {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-height: 100vh;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    // background: url(../images/bg-reg.jpeg) center !important;
-//     background: rgb(0,36,0);
-// background: linear-gradient(115deg, rgba(0,36,0,1) 0%, rgba(90,137,242,1) 0%, rgba(69,222,129,1) 100%);
+//  .auth-fluid-right {
+//     position: relative;
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-align: center;
+//     -ms-flex-align: center;
+//     align-items: center;
+//     min-height: 100vh;
+//     -webkit-box-orient: horizontal;
+//     -webkit-box-direction: normal;
+//     -ms-flex-direction: row;
+//     flex-direction: row;
+//     -webkit-box-align: stretch;
+//     -ms-flex-align: stretch;
+//     align-items: stretch;
+//     // background: url(../images/bg-reg.jpeg) center !important;
+// //     background: rgb(0,36,0);
+// // background: linear-gradient(115deg, rgba(0,36,0,1) 0%, rgba(90,137,242,1) 0%, rgba(69,222,129,1) 100%);
 
-background: linear-gradient(115deg, rgb(0, 36, 0) 0%, rgb(173 194 241) 0%, rgb(2 223 90) 100%);
-    background-size: cover !important;
+// background: linear-gradient(115deg, rgb(0, 36, 0) 0%, rgb(173 194 241) 0%, rgb(2 223 90) 100%);
+//     background-size: cover !important;
     
-}
+// }
 
 p.text-muted.mt-3.text {
     color: #343a40 !important;
@@ -18819,7 +18819,7 @@ p.text-muted.mt-3.text {
 }
 
 .auth-fluid .auth-fluid-form-box {
-    max-width: 480px;
+    max-width: 50%;
     border-radius: 0;
     z-index: 2;
     padding: 3rem;
@@ -18828,19 +18828,8 @@ p.text-muted.mt-3.text {
     width: 100%
 }
 
-.auth-fluid-form-box-reg{
-    max-width: 50%;
-    height: 100vh;
-    border-radius: 0;
-    z-index: 2;
-    padding: 2rem;
-    background-color: var(--ct-card-bg-custom);
-    position: relative;
-    width: 100%
 
-}
-
-.auth-fluid .auth-fluid-left,.auth-fluid .auth-fluid-right,  .auth-fluid-right-reg {
+.auth-fluid .auth-fluid-left,.auth-fluid .auth-fluid-right {
     padding: 3rem 3rem;
     -webkit-box-flex: 1;
     -ms-flex: 1;
