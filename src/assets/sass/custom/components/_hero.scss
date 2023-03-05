@@ -9,6 +9,7 @@
     &:after {
         content: " ";
         background-image: $hero-bg;
+        background-image: linear-gradient(to bottom, #fc516d, #5a89f2);
         position: absolute;
         top: -400px;
         right: 0;
