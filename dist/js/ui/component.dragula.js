@@ -1,1 +1,56 @@
-!function(r){"use strict";function t(){this.$body=r("body")}t.prototype.init=function(){r('[data-plugin="dragula"]').each(function(){var t=r(this).data("containers"),a=[];if(t)for(var n=0;n<t.length;n++)a.push(r("#"+t[n])[0]);else a=[r(this)[0]];var i=r(this).data("handleclass");i?dragula(a,{moves:function(t,a,n){return n.classList.contains(i)}}):dragula(a)})},r.Dragula=new t,r.Dragula.Constructor=t}(window.jQuery),function(){"use strict";window.jQuery.Dragula.init()}();
+/**
+* Theme: Hyper - Responsive Bootstrap 5 Admin Dashboard
+*  Author:  KT
+* Component: Dragula component
+*/
+
+
+!function ($) {
+    "use strict";
+
+    var Dragula = function () {
+        this.$body = $("body")
+    };
+
+
+    /* Initializing */
+    Dragula.prototype.init = function () {
+        
+        $('[data-plugin="dragula"]').each(function () {
+            var containersIds = $(this).data("containers");
+            var containers = [];
+            if (containersIds) {
+                for (var i = 0; i < containersIds.length; i++) {
+                    containers.push($("#" + containersIds[i])[0]);
+                }
+            } else {
+                containers = [$(this)[0]];
+            }
+
+            // if handle provided
+            var handleClass = $(this).data("handleclass");
+
+            // init dragula
+            if (handleClass) {
+                dragula(containers, {
+                    moves: function (el, container, handle) {
+                        return handle.classList.contains(handleClass);
+                    }
+                });
+            } else {
+                dragula(containers);
+            }
+            
+        });
+    },
+
+        //init dragula
+        $.Dragula = new Dragula, $.Dragula.Constructor = Dragula
+
+}(window.jQuery),
+
+//initializing Dragula
+function ($) {
+"use strict";
+    $.Dragula.init()
+}(window.jQuery);

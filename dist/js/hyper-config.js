@@ -1,1 +1,105 @@
-!function(){var t=sessionStorage.getItem("__HYPER_CONFIG__"),e=document.getElementsByTagName("html")[0],i={theme:"light",nav:"vertical",layout:{mode:"fluid",position:"fixed"},topbar:{color:"light"},menu:{color:"dark"},sidenav:{size:"default",user:!1}},o=(this.html=document.getElementsByTagName("html")[0],config=Object.assign(JSON.parse(JSON.stringify(i)),{}),this.html.getAttribute("data-theme")),o=(config.theme=null!==o?o:i.theme,this.html.getAttribute("data-layout")),o=(config.nav=null!==o?"topnav"===o?"horizontal":"vertical":i.nav,this.html.getAttribute("data-layout-mode")),o=(config.layout.mode=null!==o?o:i.layout.mode,this.html.getAttribute("data-layout-position")),o=(config.layout.position=null!==o?o:i.layout.position,this.html.getAttribute("data-topbar-color")),o=(config.topbar.color=null!=o?o:i.topbar.color,this.html.getAttribute("data-sidenav-size")),o=(config.sidenav.size=null!==o?o:i.sidenav.size,this.html.getAttribute("data-sidenav-user")),o=(config.sidenav.user=null!==o||i.sidenav.user,this.html.getAttribute("data-menu-color"));if(config.menu.color=null!==o?o:i.menu.color,window.defaultConfig=JSON.parse(JSON.stringify(config)),null!==t&&(config=JSON.parse(t)),window.config=config,"topnav"===e.getAttribute("data-layout")?config.nav="horizontal":config.nav="vertical",config&&(e.setAttribute("data-theme",config.theme),e.setAttribute("data-layout-mode",config.layout.mode),e.setAttribute("data-menu-color",config.menu.color),e.setAttribute("data-topbar-color",config.topbar.color),e.setAttribute("data-layout-position",config.layout.position),"vertical"==config.nav)){let t=config.sidenav.size;window.innerWidth<=767?t="full":767<=window.innerWidth&&window.innerWidth<=1140&&"full"!==self.config.sidenav.size&&"fullscreen"!==self.config.sidenav.size&&(t="condensed"),e.setAttribute("data-sidenav-size",t),config.sidenav.user&&"true"===config.sidenav.user.toString()?e.setAttribute("data-sidenav-user",!0):e.removeAttribute("data-sidenav-user")}}();
+/**
+* Theme: Hyper - Responsive Bootstrap 5 Admin Dashboard
+*  Author:  KT
+* Module/App: Theme Config Js
+*/
+
+(function () {
+    var savedConfig = sessionStorage.getItem("__HYPER_CONFIG__");
+    // var savedConfig = localStorage.getItem("__HYPER_CONFIG__");
+
+    var html = document.getElementsByTagName("html")[0];
+
+    //  Default Config Value
+    var defaultConfig = {
+        theme: "light",
+
+        nav: "vertical",
+
+        layout: {
+            mode: "fluid",
+            position: "fixed",
+        },
+
+        topbar: {
+            color: "light",
+        },
+
+        menu: {
+            color: "dark",
+        },
+
+        // This option for only vertical (left Sidebar) layout
+        sidenav: {
+            size: "default",
+            user: false,
+        },
+    };
+
+
+    this.html = document.getElementsByTagName('html')[0];
+
+    config = Object.assign(JSON.parse(JSON.stringify(defaultConfig)), {});
+
+    var layoutColor = this.html.getAttribute('data-theme');
+    config['theme'] = layoutColor !== null ? layoutColor : defaultConfig.theme;
+
+    var layoutNav = this.html.getAttribute('data-layout');
+    config['nav'] = layoutNav !== null ? layoutNav === 'topnav' ? 'horizontal' : 'vertical' : defaultConfig.nav;
+
+    var layoutSize = this.html.getAttribute('data-layout-mode');
+    config['layout']['mode'] = layoutSize !== null ? layoutSize : defaultConfig.layout.mode;
+
+    var layoutMode = this.html.getAttribute('data-layout-position');
+    config['layout']['position'] = layoutMode !== null ? layoutMode : defaultConfig.layout.position;
+
+    var topbarColor = this.html.getAttribute('data-topbar-color');
+    config['topbar']['color'] = topbarColor != null ? topbarColor : defaultConfig.topbar.color;
+
+    var leftbarSize = this.html.getAttribute('data-sidenav-size');
+    config['sidenav']['size'] = leftbarSize !== null ? leftbarSize : defaultConfig.sidenav.size;
+
+    var sidebarUser = this.html.getAttribute('data-sidenav-user')
+    config['sidenav']['user'] = sidebarUser !== null ? true : defaultConfig.sidenav.user;
+
+    var menuColor = this.html.getAttribute('data-menu-color');
+    config['menu']['color'] = menuColor !== null ? menuColor : defaultConfig.menu.color;
+
+    window.defaultConfig = JSON.parse(JSON.stringify(config));
+
+    if (savedConfig !== null) {
+        config = JSON.parse(savedConfig);
+    }
+
+    window.config = config;
+
+    if (html.getAttribute("data-layout") === "topnav") {
+        config.nav = "horizontal"
+    } else {
+        config.nav = "vertical"
+    }
+
+    if (config) {
+        html.setAttribute("data-theme", config.theme);
+        html.setAttribute("data-layout-mode", config.layout.mode);
+        html.setAttribute("data-menu-color", config.menu.color);
+        html.setAttribute("data-topbar-color", config.topbar.color);
+        html.setAttribute("data-layout-position", config.layout.position);
+        if (config.nav == "vertical") {
+            let size = config.sidenav.size;
+            if (window.innerWidth <= 767) {
+                size = "full";
+            } else if (window.innerWidth >= 767 && window.innerWidth <= 1140) {
+                if (self.config.sidenav.size !== 'full' && self.config.sidenav.size !== 'fullscreen') {
+                    size = "condensed";
+                }
+            }
+            html.setAttribute("data-sidenav-size", size);
+            if (config.sidenav.user && config.sidenav.user.toString() === "true") {
+                html.setAttribute("data-sidenav-user", true);
+            } else {
+                html.removeAttribute("data-sidenav-user");
+            }
+        }
+    }
+})();
