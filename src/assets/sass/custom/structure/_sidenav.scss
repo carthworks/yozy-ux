@@ -874,14 +874,14 @@ html[data-layout-mode="detached"]:not([data-layout="topnav"]) {
 @include media-breakpoint-up(xxl) {
     html[data-layout-mode="boxed"] {
         body {
-            background-color: $boxed-layout-bg;
+            // background-color: $boxed-layout-bg;
         }
 
         .wrapper {
             margin: 0 auto;
             box-shadow: $box-shadow;
             max-width: $boxed-layout-width;
-            background-color: var(--#{$prefix}body-bg);
+            // background-color: var(--#{$prefix}body-bg);
         }
     }
 }

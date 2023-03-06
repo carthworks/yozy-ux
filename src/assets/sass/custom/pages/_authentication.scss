@@ -30,7 +30,7 @@ html[data-theme="dark"] {
 
 // authentication pages background
 body.authentication-bg {
-    background-image: $auth-bg-pattern-img;
+    // background-image: $auth-bg-pattern-img;
     background-size: cover;
     background-position: center;
 
@@ -53,14 +53,56 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
 }
 
 // Authentication fluid
-.auth-fluid {
+.auth-fluid-reg {
     position: relative;
     display: flex;
     align-items: center;
     min-height: 100vh;
     flex-direction: row;
     align-items: stretch;
-    background: url("../images/bg-login.jpeg") center;
+    // background: url("../images/bg-login.png") center;
+    // background-size: cover;
+
+    .auth-fluid-form-box {
+        max-width: 480px;
+        border-radius: 0;
+        z-index: 2;
+        padding: 3rem;
+        background-color: $card-bg;
+        position: relative;
+        width: 100%;
+    }
+
+    .auth-fluid-reg-form-box {
+        max-width: 50%;
+        border-radius: 0;
+        z-index: 2;
+        padding: 3rem;
+        background-color: $card-bg;
+        position: relative;
+        width: 100%;
+    }
+
+    
+
+    .auth-fluid-right,
+    .auth-fluid-left {
+        padding: 6rem 3rem;
+        flex: 1;
+        position: relative;
+        color: $white;
+        // background-color: rgba($black, 0.3);
+    }
+
+    
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+    align-items: stretch;
+    // background: url("../images/bg-login.png") center;
     background-size: cover;
 
     .auth-fluid-form-box {
@@ -73,6 +115,18 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
         width: 100%;
     }
 
+    .auth-fluid-reg-form-box {
+        max-width: 50%;
+        border-radius: 0;
+        z-index: 2;
+        padding: 3rem;
+        background-color: $card-bg;
+        position: relative;
+        width: 100%;
+    }
+
+    
+
     .auth-fluid-right,
     .auth-fluid-left {
         padding: 6rem 3rem;
@@ -84,7 +138,6 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
 }
 
 
-
 .auth-user-testimonial {
     position: absolute;
     margin: 0 auto;
@@ -92,7 +145,7 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
     bottom: 3rem;
     left: 0;
     right: 0;
-    background: #00000085;
+    // background: #00000085;
 
     p.lead {
         font-size: 1.125rem;
@@ -128,4 +181,9 @@ html[data-theme="dark"] {
             display: none;
         }
     }
+}
+
+.my-auto-reg {
+    margin-top:0px;
+    margin-bottom: auto !important;
 }
