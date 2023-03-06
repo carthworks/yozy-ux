@@ -23,6 +23,13 @@
 
 
 <body>
+          <!-- Pre-loader -->
+          <div id="preloader">
+            <div id="status">
+                <div class="bouncing-loader"><div ></div><div ></div><div ></div></div>
+            </div>
+        </div>
+        <!-- End Preloader-->
     <!-- Begin page -->
     <div class="wrapper">
 
@@ -79,6 +86,11 @@
                                 <button class="input-group-text btn btn-primary" type="submit">Search</button>
                             </div>
                             <button type="button" class="btn btn-primary m-1"><i class="mdi mdi-briefcase-search" title="advanced search"></i> </button>
+
+                            <button type="button" class="btn btn-light" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-dots-vertical-circle-outline"></i> </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                            </div>
                         </form>
 
                         <div class="dropdown-menu dropdown-menu-animated dropdown-lg" id="search-dropdown0">
@@ -266,28 +278,17 @@
         <div class="leftside-menu">
 
             <!-- Brand Logo Light -->
-            <a href="index.html" class="logo logo-light">
+            <a href="index.html" class="logo logo-light pt-2">
             
                 <span class="logo-lg">
-                    <img src="images/yozy-logo.png" class="" alt="yozy-logo" />
-                    <span class="text-muted  font-13"> A Agile tool</span>
+                    <img src="images/yozy-logo.png" class="" alt="yozy-logo"  title=" A Agile tool"/>
+                    <!-- <span class="text-muted  font-13"> A Agile tool</span> -->
                 </span>
                 <span class="logo-sm">
-                    <img src="images/yozy-logo.png" alt="yozy- small logo">
+                    <img src="images/yozy-logo.png" alt="yozy-small logo">
                     <!-- <h6 class="main-title text-uppercase">Yozy Tech</h6> -->
                 </span>
             </a>
-
-            <!-- Brand Logo Dark -->
-            <!-- <a href="index.html" class="logo logo-dark">
-                <span class="logo-lg">
-                    <img src="images/logo-dark.png" alt="dark logo">
-                </span>
-                <span class="logo-sm">
-                    <img src="images/logo-dark-sm.png" alt="small logo">
-                </span>
-            </a> -->
-
             <!-- Sidebar Hover Menu Toggle Button -->
             <div class="button-sm-hover" data-bs-toggle="tooltip" data-bs-placement="right" title="Show Full Sidebar">
                 <i class="ri-checkbox-blank-circle-line align-middle"></i>
@@ -312,10 +313,10 @@
                 <!--- Sidemenu -->
                 <ul class="side-nav">
 
-                    <li class="side-nav-title">Kanban</li>
+                    <li class="side-nav-title"></li>
 
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false"
+                        <a data-bs-toggle="collapse"  href="board.html"  aria-expanded="false"
                             aria-controls="sidebarDashboards" class="side-nav-link">
                             <i class="uil-home-alt"></i>
                             <!-- <span class="badge bg-success float-end">5</span> -->
@@ -331,7 +332,7 @@
                         </div> -->
                     </li>
 
-                    <li class="side-nav-title">Projects</li>
+                    <!-- <li class="side-nav-title">Projects</li> -->
             
                     <li class="side-nav-item">
                         <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false"
@@ -343,7 +344,7 @@
                         <div class="collapse" id="sidebarProjects">
                             <ul class="side-nav-second-level">
                                 <li>
-                                    <a href="dashboard-analytics.html">Create task</a>
+                                    <a href="projects.html">Create task</a>
                                 </li>
                                 <li>
                                     <a href="dashboard-analytics.html">Plan a Sprint</a>
@@ -399,7 +400,7 @@
 
                                         
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-secondary dropdown-toggle  btn-sm ms-3 arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <button type="button" class="btn btn-secondary btn-sm dropdown-toggle  btn-sm ms-3 arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="mdi mdi-folder font-16"></i>
                                                 <i class="mdi mdi-chevron-down"></i>
                                             </button>
@@ -411,6 +412,7 @@
                                                 <a class="dropdown-item" href="javascript: void(0);">Forums</a>
                                             </div>
                                         </div>
+                                        <button class="btn btn-primary btn-sm mt-2 mt-md-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right </button>
                                         
                                 </h4>
                             </div>
@@ -2224,8 +2226,7 @@
                                             <div class="p-2">
                                                 <div class="row align-items-center">
                                                     <div class="col-auto">
-                                                        <img src="images/projects/project-1.jpg" class="avatar-sm rounded"
-                                                            alt="file-image" />
+                                                       
                                                     </div>
                                                     <div class="col ps-0">
                                                         <a href="javascript:void(0);"
@@ -2355,6 +2356,26 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
     <!-- Theme Config Js -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
+                images, lists, etc.
+            </div>
+            <h5 class="mt-3">List</h5>
+            <ul class="ps-3">
+                <li class="">Nemo enim ipsam voluptatem quia aspernatur</li>
+                <li class="">Neque porro quisquam est, qui dolorem</li>
+                <li class="">Quis autem vel eum iure qui in ea</li>
+            </ul>
+        </div>
+    </div>
+           
     <script src="js/hyper-config.js"></script>
 
   <!-- Vendor js -->

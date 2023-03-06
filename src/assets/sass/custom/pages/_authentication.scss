@@ -79,7 +79,7 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
         flex: 1;
         position: relative;
         color: $white;
-        background-color: rgba($black, 0.3);
+        // background-color: rgba($black, 0.3);
     }
 }
 
@@ -92,6 +92,7 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
     bottom: 3rem;
     left: 0;
     right: 0;
+    background: #00000085;
 
     p.lead {
         font-size: 1.125rem;
