@@ -53,15 +53,15 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
 }
 
 // Authentication fluid
-.auth-fluid-reg {
+.auth-fluid {
     position: relative;
     display: flex;
     align-items: center;
     min-height: 100vh;
     flex-direction: row;
     align-items: stretch;
-    // background: url("../images/bg-login.png") center;
-    // background-size: cover;
+    background: url("../images/bg-login.png") center;
+    background-size: cover;
 
     .auth-fluid-form-box {
         max-width: 480px;
@@ -102,7 +102,7 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
     min-height: 100vh;
     flex-direction: row;
     align-items: stretch;
-    // background: url("../images/bg-login.png") center;
+    background: url("../images/bg-login.png") center;
     background-size: cover;
 
     .auth-fluid-form-box {
@@ -145,6 +145,8 @@ body.auth-fluid-pages[data-sidenav-size="condensed"] {
     bottom: 3rem;
     left: 0;
     right: 0;
+    top: 2rem !important;
+    color: #5a5a5a !important;
     // background: #00000085;
 
     p.lead {
@@ -186,4 +188,115 @@ html[data-theme="dark"] {
 .my-auto-reg {
     margin-top:0px;
     margin-bottom: auto !important;
+}
+
+
+.login-card {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: url(../images/login/login_bg.jpg);
+    background-position: center;
+    padding: 30px 12px;
+}
+
+
+.login-card .login-main {
+    width: 450px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 37px rgb(8 21 66 / 5%);
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.login-card .logo {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center !important;
+    margin: o auto;
+    width: 100%;
+}
+
+.login-card .login-main .theme-form .form-group {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.login-card .login-main .theme-form input {
+    background-color: #f3f3ff;
+    transition: all 0.3s ease;
+}
+
+
+form.theme-form input {
+    background-color: #f3f3ff;
+    transition: all 0.3s ease;
+}
+
+img.img-fluid.for-dark {
+    height: 3rem !important;
+    text-align: center;
+}
+
+.logo-reg {
+    height: 3rem !important;
+    text-align: center;
+}
+
+.btn-showcase {
+    margin-bottom: -10px;
+}
+
+.login-card .login-main .theme-form .show-hide {
+    top: 50%;
+}
+
+.show-hide {
+    position: absolute;
+    top: 52px;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.show-hide span {
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--theme-deafult);
+}
+
+.login-card .login-main .theme-form h4 {
+    margin-bottom: 5px;
+}
+
+.login-card .login-main .theme-form label {
+    font-size: 15px;
+    letter-spacing: 0.4px;
+}
+
+textarea#example-textarea {
+    background-color: #f3f3ff;
+    transition: all 0.3s ease;
+}
+
+.left-btm-content {
+    position: absolute;
+    bottom: 1rem;
+    width: 70%;
+    margin: 0 auto;
+    left: 12rem;
+}
+
+h3.tagline-faq {
+    background: #ffffffad;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+p.text-muted.mt-3.faq-tagline {
+    background: #ffffffd9;
+    padding: 1rem;
+    border-radius: 6px;
 }
