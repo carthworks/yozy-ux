@@ -11,10 +11,6 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
 
-    <!-- Theme Config Js -->
-    <script src="js/hyper-config.js"></script>
-
-
     <!-- Icons css -->
     <link href="css/icons.min.css" rel="stylesheet" type="text/css" /> 
 
@@ -51,10 +47,10 @@
                         <!-- Logo Dark -->
                         <a href="index.html" class="logo-dark">
                             <span class="logo-lg">
-                                <img src="images/logo-dark.png" alt="dark logo">
+                                <img src="images/yozy-logo.png" alt="dark logo">
                             </span>
                             <span class="logo-sm">
-                                <img src="images/logo-dark-sm.png" alt="small logo">
+                                <img src="images/yozy-logo.png" alt="small logo">
                             </span>
                         </a>
                     </div>
@@ -335,16 +331,16 @@
                         </div> -->
                     </li>
 
-                    <li class="side-nav-title">Projetcs</li>
+                    <li class="side-nav-title">Projects</li>
             
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarProjetcs" aria-expanded="false"
-                            aria-controls="sidebarProjetcs" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false"
+                            aria-controls="sidebarProjects" class="side-nav-link">
                             <i class="uil-home-alt"></i>
                             <span class="badge bg-success float-end">5</span>
-                            <span> Projetcs</span>
+                            <span> Projects</span>
                         </a>
-                        <div class="collapse" id="sidebarProjetcs">
+                        <div class="collapse" id="sidebarProjects">
                             <ul class="side-nav-second-level">
                                 <li>
                                     <a href="dashboard-analytics.html">Create task</a>
@@ -399,9 +395,22 @@
                                 </div>
                                 <h4 class="page-title">Kanban Board
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#add-new-task-modal"
-                                        class="btn btn-success btn-sm ms-3">Add New</a>
-                                        <!-- <a href="#" data-bs-toggle="modal" data-bs-target="#task-detail-modal"
-                                        class="btn btn-success btn-sm ms-3">Task deatils </a> -->
+                                        class="btn btn-success btn-sm ms-3"> <i class="mdi mdi-plus-circle me-2"></i>Add New</a>
+
+                                        
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-secondary dropdown-toggle  btn-sm ms-3 arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="mdi mdi-folder font-16"></i>
+                                                <i class="mdi mdi-chevron-down"></i>
+                                            </button>
+                                            <div class="dropdown-menu" style="">
+                                                <span class="dropdown-header">Move to:</span>
+                                                <a class="dropdown-item" href="javascript: void(0);">Social</a>
+                                                <a class="dropdown-item" href="javascript: void(0);">Promotions</a>
+                                                <a class="dropdown-item" href="javascript: void(0);">Updates</a>
+                                                <a class="dropdown-item" href="javascript: void(0);">Forums</a>
+                                            </div>
+                                        </div>
                                         
                                 </h4>
                             </div>
@@ -528,7 +537,7 @@
                                                 <p class="mb-0">
                                                     <img src="images/users/avatar-1.jpg" alt="user-img"
                                                         class="avatar-xs rounded-circle me-1" />
-                                                    <span class="align-middle">Rajnarayan</span>
+                                                    <span class="align-middle">Raj narayan</span>
                                                 </p>
                                             </div> <!-- end card-body -->
                                         </div>
@@ -2072,7 +2081,7 @@
                     <div class="row 2partdiv">
                         <div class="col-md-8">
                             <div class="p-2">
-                                <h5 class="mt-0">Description:</h5>
+                                <h5 class="mt-0">Task Description:</h5>
     
                                 <p class="text-muted mb-4">
                                     Sales id 1030 in the cart screen disables the order button. Other package types for this
@@ -2098,7 +2107,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-4" id="tooltip-container">
-                                            <h5>Asignee:</h5>
+                                            <h5>Assignee:</h5>
                                             <a href="javascript:void(0);" data-bs-container="#tooltip-container"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title="Mat Helme"
                                                 class="d-inline-block">
@@ -2115,7 +2124,7 @@
                                     <li class="nav-item">
                                         <a href="#home-b1" data-bs-toggle="tab" aria-expanded="false"
                                             class="nav-link active">
-                                            Comments
+                                            Comments <span class="text-muted">(15)</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -2137,17 +2146,20 @@
     
                                 <div class="tab-content">
                                     <div class="tab-pane show active" id="home-b1">
-                                        <textarea class="form-control form-control-light mb-2" placeholder="Write message"
-                                            id="example-textarea" rows="3"></textarea>
-                                        <div class="text-end">
-                                            <div class="btn-group mb-2 d-none d-sm-inline-block">
-                                                <button type="button" class="btn btn-link btn-sm text-muted font-18"><i
-                                                        class="ri-attachment-2"></i></button>
-                                            </div>
-                                            <div class="btn-group mb-2 ms-2 d-none d-sm-inline-block">
-                                                <button type="button" class="btn btn-primary btn-sm">Submit</button>
-                                            </div>
+                                        <div class="border rounded">
+                                            <form action="#" class="comment-area-box">
+                                                <textarea rows="4" class="form-control border-0 resize-none" placeholder="Write something...."></textarea>
+                                                <div class="p-2 bg-light d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <a href="#" class="btn btn-sm px-2 font-16 btn-light"><i class="uil uil-scenery"></i></a>
+                                                        <a href="#" class="btn btn-sm px-2 font-16 btn-light"><i class="uil uil-location"></i></a>
+                                                        <a href="#" class="btn btn-sm px-2 font-16 btn-light"><i class="uil uil-paperclip"></i></a>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-sm btn-success"><i class="uil uil-message me-1"></i>Add Comment</button>
+                                                </div>
+                                            </form>
                                         </div>
+                                 
     
                                         <div class="d-flex mt-2">
                                             <img class="me-3 avatar-sm rounded-circle" src="images/users/avatar-3.jpg"
@@ -2286,7 +2298,16 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6 text-left">Assigned To</div>
-                                <div class="col-md-6">kavi</div>
+                                <div class="col-md-6"><div class="d-flex">
+                                    <img src="images/users/avatar-9.jpg" alt="Arya S" class="rounded-circle me-2" height="24">
+                                    <div>
+                                        <h5 class="mt-1 font-14">
+                                            Kavi
+                                        </h5>
+                                    </div>
+                                </div>
+
+                                </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6 text-left">Priority</div>
@@ -2303,7 +2324,7 @@
     
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p></p><small>Labels: </small></p>
+                                    <p><small>Labels: </small></p>
                                     <span class="badge bg-primary rounded-pill">Primary</span>
                                     <span class="badge bg-secondary text-light rounded-pill">Secondary</span>
                                     <span class="badge bg-success rounded-pill">Success</span>
@@ -2313,8 +2334,17 @@
                                     <span class="badge bg-light text-dark rounded-pill">Light</span>
                                     <span class="badge bg-dark text-light rounded-pill">Dark</span>
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="mt-3">
+                                       
+                                        <h6 class="text-uppercase mt-3">Task progress</h6>
+                                        <div class="progress my-2 progress-sm">
+                                            <div class="progress-bar progress-lg bg-success" role="progressbar" style="width: 46%" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p class="text-muted font-13 mb-0">6 (50%) of 12</p>
+                                    </div>
+                                </div>
                             </div>
-    
     
                         </div>
                     </div>
@@ -2324,17 +2354,19 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
+    <!-- Theme Config Js -->
+    <script src="js/hyper-config.js"></script>
 
   <!-- Vendor js -->
   <script src="js/vendor.min.js"></script>
     
+   <!-- dragula js-->
+   <script src="js/vendor/dragula.min.js"></script>
+   
   <!-- dragula js-->
   <script src="js/ui/component.dragula.js"></script>
   
-  <!-- demo js -->
-  <script src="js/ui/component.dragula.js"></script>
-  
+ 
   <!-- App js -->
   <script src="js/app.min.js"></script>
 
